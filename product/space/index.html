@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>Space Mic Overlay | YumeLabs</title>
+  <meta name="title" content="Space Mic Overlay | YumeLabs" />
+  <meta name="description" content="Launch your stream into the cosmos with the Space Mic Overlay — a sleek, modern design packed with sci-fi vibes and starry elements. Ideal for VTubers and gamers who want a futuristic, clean look on their mic feed." />
+  <meta name="author" content="YumeLabs" />
+  <meta name="keywords" content="space mic overlay, sci-fi streaming asset, futuristic mic frame, VTuber overlay" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yumelabs.shop/product/space" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yumelabs.shop/product/space" />
+  <meta property="og:title" content="Space Mic Overlay | YumeLabs" />
+  <meta property="og:description" content="Launch your stream into the cosmos with the Space Mic Overlay — a sleek, modern design packed with sci-fi vibes and starry elements. Ideal for VTubers and gamers who want a futuristic, clean look on their mic feed." />
+  <meta property="og:image" content="../../assets/meta/space-social-preview.webp" />
+  <meta property="og:site_name" content="YumeLabs" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://yumelabs.shop/product/space" />
+  <meta name="twitter:title" content="Space Mic Overlay | YumeLabs" />
+  <meta name="twitter:description" content="Launch your stream into the cosmos with the Space Mic Overlay — a sleek, modern design packed with sci-fi vibes and starry elements. Ideal for VTubers and gamers who want a futuristic, clean look on their mic feed." />
+  <meta name="twitter:image" content="../../assets/meta/space-social-preview.webp" />
+  <meta name="twitter:creator" content="@yumelabs_ofc" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../../assets/images/favicon/favicon-yumelabs.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon/favicon-16x16.png" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Fontawesome (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <style>
+    /* Product Detail Specific Styles */
+    .product-detail {
+      padding: 40px 0;
+      background-color: var(--light-gray);
+    }
+
+    .product-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background: var(--white);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 450px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: var(--light-gray);
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }
+
+    .main-image:hover {
+      transform: scale(1.02);
+    }
+
+    .thumbnail-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .thumbnail {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 2px solid var(--medium-gray);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .thumbnail:hover,
+    .thumbnail.active {
+      border-color: var(--wisteria);
+      transform: translateY(-3px);
+    }
+
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .product-header {
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--medium-gray);
+    }
+
+    .product-title {
+      font-size: 28px;
+      color: var(--black);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .product-meta {
+      display: flex;
+      gap: 15px;
+      font-size: 14px;
+      color: var(--dark-gray);
+    }
+
+    .product-meta i {
+      margin-right: 5px;
+      color: var(--wisteria);
+    }
+
+    .product-category {
+      color: var(--wisteria);
+      font-weight: 600;
+    }
+
+    .product-category:hover {
+      text-decoration: underline;
+    }
+
+    .price-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .product-price {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--wisteria);
+    }
+
+    .original-price {
+      font-size: 18px;
+      text-decoration: line-through;
+      color: var(--dark-gray);
+      opacity: 0.7;
+    }
+
+    .discount-badge {
+      background: var(--carnation-pink);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .product-description-wrapper {
+      padding: 15px 0;
+      border-top: 1px solid var(--medium-gray);
+      border-bottom: 1px solid var(--medium-gray);
+    }
+
+    .product-description {
+      margin-top: 10px;
+      line-height: 1.7;
+    }
+
+    .product-features {
+      background: var(--light-gray);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .product-features h3 {
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .product-details {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .file-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .file-info i {
+      color: var(--wisteria);
+    }
+
+    .keywords {
+      margin-top: 15px;
+    }
+
+    .keyword-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .keyword-tag {
+      background: var(--light-gray);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      /* Or 'flex-start' depending on layout */
+      margin-top: 1rem;
+    }
+
+    .action-buttons button {
+      background-color: var(--wisteria);
+      color: var(--white);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .product-container {
+        grid-template-columns: 1fr;
+      }
+
+      .main-image {
+        height: 350px;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-container {
+        padding: 20px;
+      }
+
+      .main-image {
+        height: 250px;
+      }
+
+      .product-title {
+        font-size: 24px;
+      }
+
+      .product-price {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Your content goes here -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="/">YumeLabs</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/shop">Shop</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="/shop">All Products</a>
+              <a href="/shop/category/backgrounds">Backgrounds</a>
+              <a href="/shop/category/mic-overlays">Mic Overlays</a>
+              <a href="/shop/category/stream-overlays">Stream Overlays</a>
+              <a href="/shop/category/background-music">BGM</a>
+              <a href="/shop/category/cake-overlays">Cake</a>
+              <a href="/shop/category/gaming-chairs-overlays">Gaming Chairs</a>
+              <a href="/shop/category/gaming-desks-overlays">Gaming Desk</a>
+              <a href="/shop/category/accessories-overlays">Accessories</a>
+              <a href="/shop/category/printable-bookmarks">Bookmark</a>
+            </div>
+          </li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icons">
+        <!--
+                
+                <a href="/cart" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+                
+                -->
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+      <div class="container">
+        <div class="product-container">
+          <!-- Product Gallery -->
+          <div class="product-gallery">
+            <img id="mainImage" src="../../assets/images/thumbnails/space-1.webp" alt="Space Mic Overlay"
+              class="main-image" />
+            <div class="thumbnail-container">
+              
+              <img src="../../assets/images/thumbnails/space-1.webp" alt="Space Mic Overlay preview 1"
+                class="thumbnail {{#if @first}}active{{/if}}" data-full="../../assets/images/thumbnails/space-1.webp"
+                onclick="changeImage(this)" />
+              
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="product-info">
+            <div class="product-header">
+              <h1 class="product-title">
+                Space Mic Overlay
+              </h1>
+              <div class="product-meta">
+                <a href="/shop/category/mic-overlays" class="product-category">
+                  <i class="fas fa-tag"></i>
+                  Mic Overlays
+                </a>
+                <span class="product-series">
+                  <i class="fas fa-layer-group"></i>
+                  Space Series
+                </span>
+              </div>
+            </div>
+
+            <div class="price-section">
+              <div class="product-price">$ 2.44</div>
+            </div>
+
+            <div class="product-description-wrapper">
+              <h3>Product Description</h3>
+              <p class="product-description">
+                Launch your stream into the cosmos with the Space Mic Overlay — a sleek, modern design packed with sci-fi vibes and starry elements. Ideal for VTubers and gamers who want a futuristic, clean look on their mic feed.
+              </p>
+            </div>
+
+            <div class="product-features">
+              <h3>About This Mic Overlays</h3>
+              <p>
+                🎤 VTuber Mic Asset!
+
+Unleash your virtual charisma with this show-stopping mic overlay designed to level up your streaming setup in style!
+
+✨ Features:
+- Vibrant, high-resolution design
+- Crisp, eye-catching colors
+- Easy-to-use PNG format with transparent background
+
+🎁 After Purchase:
+Get an exclusive PNG version of the mic overlay for instant flex on your stream!
+              </p>
+            </div>
+
+            <div class="action-buttons">
+              <button onclick="location.href='https://www.etsy.com/listing/1629437198'">Buy on Etsy</button>
+            </div>
+
+            <div class="product-details">
+              <div class="file-info">
+                <i class="fas fa-file-alt"></i>
+                <span>Includes 1 .PNG file(s)</span>
+              </div>
+
+              <div class="keywords">
+                <span><i class="fas fa-tags"></i> Keywords:</span>
+                <div class="keyword-tags">
+                  
+                  <span class="keyword-tag">space mic overlay</span>
+                  
+                  <span class="keyword-tag">sci-fi streaming asset</span>
+                  
+                  <span class="keyword-tag">futuristic mic frame</span>
+                  
+                  <span class="keyword-tag">VTuber overlay</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="toast-container" class="toast-container"></div>
+      <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img id="modalImage" class="modal-content" />
+      </div>
+    </section>
+  </main>
+
+
+
+  <footer class="footer">
+    <!-- Footer content -->
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>YumeLabs</h3>
+          <p>
+            Premium VTuber assets and digital products for content creators
+            who want to stand out.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="/shop">All Products</a></li>
+            <li><a href="#featured-products">Featured Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/faq">FAQs</a></li>
+            <li><a href="/download-help">Download Help</a></li>
+            <li><a href="/refund">Refund Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Also On</h3>
+          <div class="social-links">
+            <a href="https://yumelabs.etsy.com" class="etsy-link" title="Etsy">
+              <i class="fa-brands fa-etsy"></i>
+            </a>
+          </div>
+          <p>Find some of our products on Etsy as well!</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="MasterCard"></i>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 YumeLabs. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../assets/js/scripts.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>YumeLabs — VTuber Stream Assets & Digital Goods</title>
+  <meta name="title" content="YumeLabs — VTuber Stream Assets & Digital Goods" />
+  <meta name="description"
+    content="Discover high-quality VTuber overlays, alerts, and stream assets at YumeLabs — your digital shop for enhancing VTuber streams." />
+  <meta name="author" content="YumeLabs" />
+  <meta name="keywords"
+    content="VTuber assets, stream overlays, digital goods, VTuber shop, YumeLabs, stream alerts, Twitch overlays" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.yumelabs.shop/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.yumelabs.shop/" />
+  <meta property="og:title" content="YumeLabs — VTuber Overlays & Digital Goods" />
+  <meta property="og:description"
+    content="Shop high-quality VTuber stream assets, overlays, and alerts — enhance your stream with YumeLabs." />
+  <meta property="og:image" content="./assets/images/social/social-preview.png" />
+  <meta property="og:site_name" content="YumeLabs" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.yumelabs.shop/" />
+  <meta name="twitter:title" content="YumeLabs — VTuber Overlays & Digital Goods" />
+  <meta name="twitter:description"
+    content="Shop high-quality VTuber stream assets, overlays, and alerts — enhance your stream with YumeLabs." />
+  <meta name="twitter:image" content="https://www.yumelabs.shop/images/social-preview.jpg" />
+  <meta name="twitter:creator" content="@YumeLabs" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/images/favicon/favicon-yumelabs.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+
+  <!-- Theme Color (optional) -->
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Manifest (PWA, optional) -->
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fontawesome Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <style>
+    /* Hero Banner */
+    .hero-banner {
+      background-color: var(--wisteria);
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 1;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      /* optional: center content */
+      align-items: center;
+      justify-content: center;
+      color: white;
+      /* or any contrast color */
+    }
+
+    /* Intro Section */
+    .intro-text {
+      padding: 60px 0;
+      background-color: var(--light-gray);
+      text-align: center;
+    }
+
+    .intro-text h1 {
+      font-size: 36px;
+      color: var(--black);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .intro-text p {
+      font-size: 18px;
+      color: var(--dark-gray);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Gradient underline effect */
+    .intro-text h1 {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
+
+    .intro-text h1:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg,
+          var(--wisteria),
+          var(--carnation-pink));
+      border-radius: 2px;
+    }
+
+    /* Category Highlights */
+    .category-highlights {
+      padding: 60px 0;
+      background-color: var(--white);
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 10px;
+      border-radius: 10px;
+      background-color: var(--light-gray);
+      transition: all 0.3s ease;
+    }
+
+    .category-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(182, 156, 227, 0.2);
+    }
+
+    .category-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--wisteria);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .category-item:nth-child(2n) .category-icon {
+      background-color: var(--tiffany-blue);
+    }
+
+    .category-item:nth-child(3n) .category-icon {
+      background-color: var(--carnation-pink);
+    }
+
+    .category-item span {
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* Featured Products */
+    .featured-products {
+      padding: 60px 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .view-all-wrapper {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .view-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 600;
+      color: var(--wisteria);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    /* How It Works */
+    .how-it-works {
+      padding: 60px 0;
+      background-color: var(--white);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: var(--light-gray);
+      transition: all 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(182, 156, 227, 0.2);
+    }
+
+    .step-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: var(--wisteria);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 20px;
+      position: relative;
+    }
+
+    .step-number {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: var(--carnation-pink);
+      color: var(--white);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .step:nth-child(2) .step-icon {
+      background-color: var(--tiffany-blue);
+    }
+
+    .step:nth-child(3) .step-icon {
+      background-color: var(--carnation-pink);
+    }
+
+    .step:nth-child(4) .step-icon {
+      background: linear-gradient(45deg,
+          var(--wisteria),
+          var(--tiffany-blue));
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+
+    /* Reviews */
+    .reviews {
+      padding: 60px 0;
+      background-color: var(--light-gray);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    /* Responsive Styles for Homepage */
+    @media (max-width: 768px) {
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .hero-banner {
+        aspect-ratio: auto;
+        height: 200px;
+      }
+
+      .hero-image {
+        object-position: left center;
+      }
+
+      .intro-text {
+        padding: 40px 0;
+      }
+
+      .intro-text h1 {
+        font-size: 28px;
+      }
+
+      .intro-text p {
+        font-size: 16px;
+        padding: 0 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-banner {
+        height: 150px;
+      }
+
+      .hero-image {
+        object-position: left center;
+      }
+
+      .intro-text h1 {
+        font-size: 24px;
+      }
+
+      .intro-text p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="/">YumeLabs</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/shop">Shop</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="/shop">All Products</a>
+              <a href="/shop/category/backgrounds">Backgrounds</a>
+              <a href="/shop/category/mic-overlays">Mic Overlays</a>
+              <a href="/shop/category/stream-overlays">Stream Overlays</a>
+              <a href="/shop/category/background-music">BGM</a>
+              <a href="/shop/category/cake-overlays">Cake</a>
+              <a href="/shop/category/gaming-chairs-overlays">Gaming Chairs</a>
+              <a href="/shop/category/gaming-desks-overlays">Gaming Desk</a>
+              <a href="/shop/category/accessories-overlays">Accessories</a>
+              <a href="/shop/category/printable-bookmarks">Bookmark</a>
+            </div>
+          </li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icons">
+        <!--
+                
+                <a href="/cart" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+                
+                -->
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <img src="./assets/images/banner/vtuber-assets-store-homepage-banner-by-yumelabs.webp"
+        alt="VTuber assets store banner by YumeLabs" class="hero-image" loading="lazy" decoding="async" />
+    </section>
+    <section class="intro-text">
+      <div class="container">
+        <h1>Welcome to YumeLabs – Your Ultimate VTuber Assets Marketplace</h1>
+        <p>
+          Discover premium anime-style VTuber assets including backgrounds,
+          mic overlays, OSTs, and gaming gear. Instant digital downloads
+          designed to help you level up your streaming game.
+        </p>
+      </div>
+    </section>
+    <section class="category-highlights">
+      <div class="container">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-grid">
+          <a href="/shop/category/backgrounds" class="category-item">
+            <div class="category-icon">
+              <i class="fas fa-image"></i>
+            </div>
+            <span>Backgrounds</span>
+          </a>
+          <a href="/shop/category/mic-overlays" class="category-item">
+            <div class="category-icon">
+              <i class="fas fa-microphone"></i>
+            </div>
+            <span>Mic Overlays</span>
+          </a>
+          <a href="/shop/category/background-music" class="category-item">
+            <div class="category-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <span>BGM/OST</span>
+          </a>
+          <a href="/shop/category/stream-overlays" class="category-item">
+            <div class="category-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <span>Stream Overlays</span>
+          </a>
+          <a href="/shop/category/gaming-chairs-overlays" class="category-item">
+            <div class="category-icon">
+              <i class="fas fa-chair"></i>
+            </div>
+            <span>Gaming Chairs</span>
+          </a>
+          <a href="/shop/category/accessories-overlays" class="category-item">
+            <div class="category-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <span>Accessories</span>
+          </a>
+          <a href="/shop/category/cake-overlays" class="category-item">
+            <div class="category-icon">
+              <i class="fas fa-birthday-cake"></i>
+            </div>
+            <span>Cake</span>
+          </a>
+          <a href="/shop/category/gaming-desks-overlays" class="category-item">
+            <div class="category-icon">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <span>Gaming Desk</span>
+          </a>
+          <a href="/shop/category/printable-bookmarks" class="category-item">
+            <div class="category-icon">
+              <i class="fas fa-bookmark"></i>
+            </div>
+            <span>Bookmark</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured-products" class="featured-products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Products</h2>
+        </div>
+        <div id="featured-products-grid" class="product-grid">
+          <div class="product-card">
+            <a href="./product/cute-pink-cat/" class="product-thumb">
+              <img src="./assets/images/thumbnails/cute-pink-cat-1.webp" alt="" loading="lazy">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">Cute Pink Cat Stream Overlays</h3>
+              <p class="product-category">Stream Overlays</p>
+              <div class="product-meta">
+                <span class="product-price">$ 7.93</span>
+                <span class="product-rating"></span>
+
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <a href="./product/red-demon/" class="product-thumb">
+              <img src="./assets/images/thumbnails/red-demon-1.webp" alt="" loading="lazy">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">Red Demon</h3>
+              <p class="product-category">Stream Overlays</p>
+              <div class="product-meta">
+                <span class="product-price">$ 7.93</span>
+                <span class="product-rating"></span>
+
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <a href="./product/fuwa-fuwa-collection/" class="product-thumb">
+              <img src="./assets/images/thumbnails/fuwa-fuwa-collection-1.webp" alt="" loading="lazy">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">Fuwa Fuwa Collection Background Music</h3>
+              <p class="product-category">Background Music</p>
+              <div class="product-meta">
+                <span class="product-price">$ 9.78</span>
+                <span class="product-rating"></span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <a href="./product/echoes-of-the-dark-collection/" class="product-thumb">
+              <img src="/assets/images/thumbnails/echoes-of-the-dark-collection-1.webp" alt="" loading="lazy">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">Echoes of the Dark Collection Background Music</h3>
+              <p class="product-category">Background Music</p>
+              <div class="product-meta">
+                <span class="product-price">$ 9.78</span>
+                <span class="product-rating"></span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <a href="./product/citlali/" class="product-thumb">
+              <img src="/assets/images/thumbnails/citlali-1.webp" alt="" loading="lazy">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">Citlali Stream Overlay</h3>
+              <p class="product-category">Stream Overlays</p>
+              <div class="product-meta">
+                <span class="product-price">$ 7.93</span>
+                <span class="product-rating"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="view-all-wrapper">
+          <a href="/shop" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-search"></i>
+              <span class="step-number">1</span>
+            </div>
+            <h3>Browse & Select</h3>
+            <p>
+              Explore our collection of high-quality VTuber assets and find
+              what you need.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-cart-plus"></i>
+              <span class="step-number">2</span>
+            </div>
+            <h3>Add to Cart</h3>
+            <p>Select your items and add them to your shopping cart.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-credit-card"></i>
+              <span class="step-number">3</span>
+            </div>
+            <h3>Secure Checkout</h3>
+            <p>Complete your purchase with our secure payment methods.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-download"></i>
+              <span class="step-number">4</span>
+            </div>
+            <h3>Instant Download</h3>
+            <p>
+              Get immediate access to your digital products after payment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- Footer content -->
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>YumeLabs</h3>
+          <p>
+            Premium VTuber assets and digital products for content creators
+            who want to stand out.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="/shop">All Products</a></li>
+            <li><a href="#featured-products">Featured Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/faq">FAQs</a></li>
+            <li><a href="/download-help">Download Help</a></li>
+            <li><a href="/refund">Refund Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Also On</h3>
+          <div class="social-links">
+            <a href="https://yumelabs.etsy.com" class="etsy-link" title="Etsy">
+              <i class="fa-brands fa-etsy"></i>
+            </a>
+          </div>
+          <p>Find some of our products on Etsy as well!</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="MasterCard"></i>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 YumeLabs. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./assets/js/scripts.js" defer></script>
+</body>
+
+</html>

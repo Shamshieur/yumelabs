@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>YumeLabs — VTuber Stream Assets & Digital Goods</title>
+  <meta name="title" content="YumeLabs — VTuber Stream Assets & Digital Goods" />
+  <meta name="description"
+    content="Discover high-quality VTuber overlays, alerts, and stream assets at YumeLabs — your digital shop for enhancing VTuber streams." />
+  <meta name="author" content="YumeLabs" />
+  <meta name="keywords"
+    content="VTuber assets, stream overlays, digital goods, VTuber shop, YumeLabs, stream alerts, Twitch overlays" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.yumelabs.shop/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.yumelabs.shop/" />
+  <meta property="og:title" content="YumeLabs — VTuber Overlays & Digital Goods" />
+  <meta property="og:description"
+    content="Shop high-quality VTuber stream assets, overlays, and alerts — enhance your stream with YumeLabs." />
+  <meta property="og:image" content="../../assets/images/social/social-preview.png" />
+  <meta property="og:site_name" content="YumeLabs" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.yumelabs.shop/" />
+  <meta name="twitter:title" content="YumeLabs — VTuber Overlays & Digital Goods" />
+  <meta name="twitter:description"
+    content="Shop high-quality VTuber stream assets, overlays, and alerts — enhance your stream with YumeLabs." />
+  <meta name="twitter:image" content="https://www.yumelabs.shop/images/social-preview.jpg" />
+  <meta name="twitter:creator" content="@YumeLabs" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../../assets/images/favicon/favicon-yumelabs.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon/favicon-16x16.png" />
+
+  <!-- Theme Color (optional) -->
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Manifest (PWA, optional) -->
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fontawesome Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <style>
+  /* Shop Page Specific Styles */
+  .all-products {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .product-filters {
+    display: flex;
+    gap: 15px;
+  }
+
+  .product-filters select {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--medium-gray);
+    background-color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .error-message,
+  .no-products {
+    text-align: center;
+    padding: 40px;
+    color: var(--dark-gray);
+    font-weight: 500;
+  }
+
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 5px;
+  }
+
+  .pagination a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .pagination a:hover,
+  .pagination a.active {
+    background-color: var(--wisteria);
+    color: white;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .product-filters {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="/">YumeLabs</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/shop">Shop</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="/shop">All Products</a>
+              <a href="/shop/category/backgrounds">Backgrounds</a>
+              <a href="/shop/category/mic-overlays">Mic Overlays</a>
+              <a href="/shop/category/stream-overlays">Stream Overlays</a>
+              <a href="/shop/category/background-music">BGM</a>
+              <a href="/shop/category/cake-overlays">Cake</a>
+              <a href="/shop/category/gaming-chairs-overlays">Gaming Chairs</a>
+              <a href="/shop/category/gaming-desks-overlays">Gaming Desk</a>
+              <a href="/shop/category/accessories-overlays">Accessories</a>
+              <a href="/shop/category/printable-bookmarks">Bookmark</a>
+            </div>
+          </li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icons">
+        <!--
+                
+                <a href="/cart" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+                
+                -->
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="all-products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">All Products</h2>
+          <div class="product-filters">
+            <select name="sort" id="sort">
+              <option value="popular">Sort by: Popular</option>
+              <option value="newest">Sort by: Newest</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+            </select>
+            <select name="category" id="category">
+              <option value="all">All Categories</option>
+              <option value="backgrounds">Backgrounds</option>
+              <option value="mic-overlays">Mic Overlays</option>
+              <option value="stream-overlays">Stream Overlays</option>
+              <option value="background-music">BGM</option>
+              <option value="cake-overlays">Cake</option>
+              <option value="gaming-chairs-overlays">Gaming Chairs</option>
+              <option value="gaming-desks-overlays">Gaming Desk</option>
+              <option value="accessories-overlays">Accessories</option>
+              <option value="printable-bookmarks">Bookmark</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="all-products-grid" class="product-grid">
+
+  <div class="product-card">
+    <a href="../product/deep-blue/" class="product-thumb">
+      <img src="../assets/images/thumbnails/deep-blue-1.webp" alt="Deep Blue Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Deep Blue Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/dark-gothic/" class="product-thumb">
+      <img src="../assets/images/thumbnails/dark-gothic-1.webp" alt="Dark Gothic Crown Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Dark Gothic Crown Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-grand-library/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-grand-library-1.webp" alt="24 Grand Library Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Grand Library Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/pink-frozen/" class="product-thumb">
+      <img src="../assets/images/thumbnails/pink-frozen-1.webp" alt="Pink Frozen Throne Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Pink Frozen Throne Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/dark-purple/" class="product-thumb">
+      <img src="../assets/images/thumbnails/dark-purple-1.webp" alt="Dark Purple Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Dark Purple Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/ocean-cake/" class="product-thumb">
+      <img src="../assets/images/thumbnails/ocean-cake-1.webp" alt="Ocean Cake Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Ocean Cake Overlay</h3>
+      <p class="product-category">Cake</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/gothic-rose/" class="product-thumb">
+      <img src="../assets/images/thumbnails/gothic-rose-1.webp" alt="Gothic Rose Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Gothic Rose Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-ice-room/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-ice-room-1.webp" alt="24 Ice Room Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Ice Room Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/grim/" class="product-thumb">
+      <img src="../assets/images/thumbnails/grim-1.webp" alt="Grim Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Grim Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/banana-milkshake/" class="product-thumb">
+      <img src="../assets/images/thumbnails/banana-milkshake-1.webp" alt="Banana Milkshake Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Banana Milkshake Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/space-kawaii/" class="product-thumb">
+      <img src="../assets/images/thumbnails/space-kawaii-1.webp" alt="Space Kawaii Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Space Kawaii Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/dark-blue/" class="product-thumb">
+      <img src="../assets/images/thumbnails/dark-blue-1.webp" alt="Dark Blue Gaming Desk Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Dark Blue Gaming Desk Overlay</h3>
+      <p class="product-category">Gaming Desk</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-royal-room/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-royal-room-1.webp" alt="24 Royal Room Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Royal Room Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-ballroom/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-ballroom-1.webp" alt="24 Ballroom Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Ballroom Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/skull/" class="product-thumb">
+      <img src="../assets/images/thumbnails/skull-1.webp" alt="Skull Cake Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Skull Cake Overlay</h3>
+      <p class="product-category">Cake</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/purple-space/" class="product-thumb">
+      <img src="../assets/images/thumbnails/purple-space-1.webp" alt="Purple Space Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Purple Space Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/kawaii-blue-pink/" class="product-thumb">
+      <img src="../assets/images/thumbnails/kawaii-blue-pink-1.webp" alt="Kawaii Blue Pink Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Kawaii Blue Pink Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/chocolate-drinks/" class="product-thumb">
+      <img src="../assets/images/thumbnails/chocolate-drinks-1.webp" alt="Chocolate Drinks Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Chocolate Drinks Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/kawaii-blue-crystal/" class="product-thumb">
+      <img src="../assets/images/thumbnails/kawaii-blue-crystal-1.webp" alt="Kawaii Blue Crystal Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Kawaii Blue Crystal Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/egypt-gold/" class="product-thumb">
+      <img src="../assets/images/thumbnails/egypt-gold-1.webp" alt="Egypt Gold Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Egypt Gold Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-valentine-room/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-valentine-room-1.webp" alt="24 Valentine Room Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Valentine Room Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/kawaii-pastel/" class="product-thumb">
+      <img src="../assets/images/thumbnails/kawaii-pastel-1.webp" alt="Kawaii Pastel Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Kawaii Pastel Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/violet-demon/" class="product-thumb">
+      <img src="../assets/images/thumbnails/violet-demon-1.webp" alt="Violet Demon Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Violet Demon Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/picnic-basket/" class="product-thumb">
+      <img src="../assets/images/thumbnails/picnic-basket-1.webp" alt="Picnic Basket Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Picnic Basket Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-night-church/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-night-church-1.webp" alt="24 Night Church Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Night Church Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-forest/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-forest-1.webp" alt="24 Forest Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Forest Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-church/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-church-1.webp" alt="24 Church Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Church Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-beach/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-beach-1.webp" alt="24 Beach Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Beach Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-space-room/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-space-room-1.webp" alt="24 Space Room Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Space Room Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/cute-pink-cat/" class="product-thumb">
+      <img src="../assets/images/thumbnails/cute-pink-cat-1.webp" alt="Cute Pink Cat Stream Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Cute Pink Cat Stream Overlay</h3>
+      <p class="product-category">Stream Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 7.93</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/ocean-mic/" class="product-thumb">
+      <img src="../assets/images/thumbnails/ocean-mic-1.webp" alt="Ocean Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Ocean Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/seascape/" class="product-thumb">
+      <img src="../assets/images/thumbnails/seascape-1.webp" alt="Seascape Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Seascape Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/wave-mic/" class="product-thumb">
+      <img src="../assets/images/thumbnails/wave-mic-1.webp" alt="Wave Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Wave Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/cute-blue/" class="product-thumb">
+      <img src="../assets/images/thumbnails/cute-blue-1.webp" alt="Cute Blue Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Cute Blue Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/pinky-doll/" class="product-thumb">
+      <img src="../assets/images/thumbnails/pinky-doll-1.webp" alt="Pinky Doll Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Pinky Doll Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/galaxy/" class="product-thumb">
+      <img src="../assets/images/thumbnails/galaxy-1.webp" alt="Galaxy Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Galaxy Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/kawaii-doll/" class="product-thumb">
+      <img src="../assets/images/thumbnails/kawaii-doll-1.webp" alt="Kawaii Doll Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Kawaii Doll Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/aquarium/" class="product-thumb">
+      <img src="../assets/images/thumbnails/aquarium-1.webp" alt="Aquarium Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Aquarium Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/galaxy-drinks/" class="product-thumb">
+      <img src="../assets/images/thumbnails/galaxy-drinks-1.webp" alt="Galaxy Drinks Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Galaxy Drinks Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-ocean-room/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-ocean-room-1.webp" alt="24 Ocean Room Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Ocean Room Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/gothic-purple/" class="product-thumb">
+      <img src="../assets/images/thumbnails/gothic-purple-1.webp" alt="Gothic Purple Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Gothic Purple Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/kawaii-cat/" class="product-thumb">
+      <img src="../assets/images/thumbnails/kawaii-cat-1.webp" alt="Kawaii Cat Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Kawaii Cat Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-gothic-room/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-gothic-room-1.webp" alt="24 Gothic Room Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Gothic Room Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/red-mic/" class="product-thumb">
+      <img src="../assets/images/thumbnails/red-mic-1.webp" alt="Red Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Red Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/chocolate-skull/" class="product-thumb">
+      <img src="../assets/images/thumbnails/chocolate-skull-1.webp" alt="Chocolate Skull Cake Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Chocolate Skull Cake Overlay</h3>
+      <p class="product-category">Cake</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/red-demon/" class="product-thumb">
+      <img src="../assets/images/thumbnails/red-demon-1.webp" alt="Red Demon Stream Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Red Demon Stream Overlay</h3>
+      <p class="product-category">Stream Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 7.93</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/icy-blue/" class="product-thumb">
+      <img src="../assets/images/thumbnails/icy-blue-1.webp" alt="Icy Blue Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Icy Blue Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/fuwa-fuwa-collection/" class="product-thumb">
+      <img src="../assets/images/thumbnails/fuwa-fuwa-collection-1.webp" alt="Fuwa Fuwa Collection Background Music" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Fuwa Fuwa Collection Background Music</h3>
+      <p class="product-category">Background Music</p>
+      <div class="product-meta">
+        <span class="product-price">$ 9.78</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/pink-doll/" class="product-thumb">
+      <img src="../assets/images/thumbnails/pink-doll-1.webp" alt="Pink Doll Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Pink Doll Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/dark-crown/" class="product-thumb">
+      <img src="../assets/images/thumbnails/dark-crown-1.webp" alt="Dark Crown Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Dark Crown Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/blue-crystal/" class="product-thumb">
+      <img src="../assets/images/thumbnails/blue-crystal-1.webp" alt="Blue Crystal Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Blue Crystal Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/modern-space/" class="product-thumb">
+      <img src="../assets/images/thumbnails/modern-space-1.webp" alt="Modern Space Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Modern Space Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/kawaii-ribbon/" class="product-thumb">
+      <img src="../assets/images/thumbnails/kawaii-ribbon-1.webp" alt="Kawaii Ribbon Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Kawaii Ribbon Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/cute-star/" class="product-thumb">
+      <img src="../assets/images/thumbnails/cute-star-1.webp" alt="Cute Star Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Cute Star Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/darkness/" class="product-thumb">
+      <img src="../assets/images/thumbnails/darkness-1.webp" alt="Darkness Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Darkness Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/dark/" class="product-thumb">
+      <img src="../assets/images/thumbnails/dark-1.webp" alt="Dark Gaming Desk Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Dark Gaming Desk Overlay</h3>
+      <p class="product-category">Gaming Desk</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/beach/" class="product-thumb">
+      <img src="../assets/images/thumbnails/beach-1.webp" alt="Beach Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Beach Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/cute-space/" class="product-thumb">
+      <img src="../assets/images/thumbnails/cute-space-1.webp" alt="Cute Space Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Cute Space Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/space/" class="product-thumb">
+      <img src="../assets/images/thumbnails/space-1.webp" alt="Space Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Space Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/purple-milkshake/" class="product-thumb">
+      <img src="../assets/images/thumbnails/purple-milkshake-1.webp" alt="Purple Milkshake Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Purple Milkshake Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/christmas/" class="product-thumb">
+      <img src="../assets/images/thumbnails/christmas-1.webp" alt="Christmas Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Christmas Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-dark-purple-gothic/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-dark-purple-gothic-1.webp" alt="24 Dark Purple Gothic Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Dark Purple Gothic Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/blue-cute-doll/" class="product-thumb">
+      <img src="../assets/images/thumbnails/blue-cute-doll-1.webp" alt="Blue Cute Doll Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Blue Cute Doll Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/fox-mask/" class="product-thumb">
+      <img src="../assets/images/thumbnails/fox-mask-1.webp" alt="Fox Mask Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Fox Mask Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/ocean-taller/" class="product-thumb">
+      <img src="../assets/images/thumbnails/ocean-taller-1.webp" alt="Ocean Taller Cake Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Ocean Taller Cake Overlay</h3>
+      <p class="product-category">Cake</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/gothic-red/" class="product-thumb">
+      <img src="../assets/images/thumbnails/gothic-red-1.webp" alt="Gothic Red Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Gothic Red Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/ash-of-hell/" class="product-thumb">
+      <img src="../assets/images/thumbnails/ash-of-hell-1.webp" alt="Ash of Hell Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Ash of Hell Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/blue-flower/" class="product-thumb">
+      <img src="../assets/images/thumbnails/blue-flower-1.webp" alt="Blue Flower Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Blue Flower Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/blue-sky/" class="product-thumb">
+      <img src="../assets/images/thumbnails/blue-sky-1.webp" alt="Blue Sky Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Blue Sky Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/echoes-of-the-dark-collection/" class="product-thumb">
+      <img src="../assets/images/thumbnails/echoes-of-the-dark-collection-1.webp" alt="Echoes of the Dark Collection Background Music" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Echoes of the Dark Collection Background Music</h3>
+      <p class="product-category">Background Music</p>
+      <div class="product-meta">
+        <span class="product-price">$ 9.78</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/nature-green/" class="product-thumb">
+      <img src="../assets/images/thumbnails/nature-green-1.webp" alt="Nature Green Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Nature Green Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/kawaii-space/" class="product-thumb">
+      <img src="../assets/images/thumbnails/kawaii-space-1.webp" alt="Kawaii Space Mic Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Kawaii Space Mic Overlay</h3>
+      <p class="product-category">Mic Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/cute-pink/" class="product-thumb">
+      <img src="../assets/images/thumbnails/cute-pink-1.webp" alt="Cute Pink Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Cute Pink Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/red-drinks/" class="product-thumb">
+      <img src="../assets/images/thumbnails/red-drinks-1.webp" alt="Red Drinks Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Red Drinks Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/avocado-milkshake/" class="product-thumb">
+      <img src="../assets/images/thumbnails/avocado-milkshake-1.webp" alt="Avocado Milkshake Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Avocado Milkshake Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/bookshelf/" class="product-thumb">
+      <img src="../assets/images/thumbnails/bookshelf-1.webp" alt="Bookself Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Bookself Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/reaper/" class="product-thumb">
+      <img src="../assets/images/thumbnails/reaper-1.webp" alt="Reaper Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Reaper Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/modern-green/" class="product-thumb">
+      <img src="../assets/images/thumbnails/modern-green-1.webp" alt="Modern Green Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Modern Green Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/purple-dark/" class="product-thumb">
+      <img src="../assets/images/thumbnails/purple-dark-1.webp" alt="Purple Dark Gaming Desk Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Purple Dark Gaming Desk Overlay</h3>
+      <p class="product-category">Gaming Desk</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/royal/" class="product-thumb">
+      <img src="../assets/images/thumbnails/royal-1.webp" alt="Royal Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Royal Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-mystical-forest/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-mystical-forest-1.webp" alt="24 Mystical Forest Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Mystical Forest Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/kawaii-spring/" class="product-thumb">
+      <img src="../assets/images/thumbnails/kawaii-spring-1.webp" alt="Kawaii Spring Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Kawaii Spring Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/golden-black-white/" class="product-thumb">
+      <img src="../assets/images/thumbnails/golden-black-white-1.webp" alt="Golden Black White Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Golden Black White Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/oni-mask/" class="product-thumb">
+      <img src="../assets/images/thumbnails/oni-mask-1.webp" alt="Oni Mask Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Oni Mask Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/pirate-hat/" class="product-thumb">
+      <img src="../assets/images/thumbnails/pirate-hat-1.webp" alt="Pirate Hat Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Pirate Hat Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/parfait/" class="product-thumb">
+      <img src="../assets/images/thumbnails/parfait-1.webp" alt="Parfait Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Parfait Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/grimoire/" class="product-thumb">
+      <img src="../assets/images/thumbnails/grimoire-1.webp" alt="Grimoire Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Grimoire Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/kitty-pink/" class="product-thumb">
+      <img src="../assets/images/thumbnails/kitty-pink-1.webp" alt="Kitty Pink Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Kitty Pink Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/ice-crystal/" class="product-thumb">
+      <img src="../assets/images/thumbnails/ice-crystal-1.webp" alt="Ice Crystal Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Ice Crystal Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/blue-gold/" class="product-thumb">
+      <img src="../assets/images/thumbnails/blue-gold-1.webp" alt="Blue Gold Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Blue Gold Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/crown/" class="product-thumb">
+      <img src="../assets/images/thumbnails/crown-1.webp" alt="Crown Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Crown Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/gothic-desk/" class="product-thumb">
+      <img src="../assets/images/thumbnails/gothic-desk-1.webp" alt="Gothic Gaming Desk Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Gothic Gaming Desk Overlay</h3>
+      <p class="product-category">Gaming Desk</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/outfit-rack/" class="product-thumb">
+      <img src="../assets/images/thumbnails/outfit-rack-1.webp" alt="Outfit Rack Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Outfit Rack Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/icy-frozen/" class="product-thumb">
+      <img src="../assets/images/thumbnails/icy-frozen-1.webp" alt="Icy Frozen Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Icy Frozen Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/space-purple/" class="product-thumb">
+      <img src="../assets/images/thumbnails/space-purple-1.webp" alt="Space Purple Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Space Purple Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/magic-potion/" class="product-thumb">
+      <img src="../assets/images/thumbnails/magic-potion-1.webp" alt="Magic Potion Printable Bookmark" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Magic Potion Printable Bookmark</h3>
+      <p class="product-category">Bookmark</p>
+      <div class="product-meta">
+        <span class="product-price">$ 1.22</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-egypt-room/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-egypt-room-1.webp" alt="24 Egypt Room Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Egypt Room Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/girls-sit-at-the-cliff/" class="product-thumb">
+      <img src="../assets/images/thumbnails/girls-sit-at-the-cliff-1.webp" alt="Girls Sit at The Cliff Printable Bookmark" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Girls Sit at The Cliff Printable Bookmark</h3>
+      <p class="product-category">Bookmark</p>
+      <div class="product-meta">
+        <span class="product-price">$ 1.22</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/popcorn/" class="product-thumb">
+      <img src="../assets/images/thumbnails/popcorn-1.webp" alt="Popcorn Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Popcorn Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/gold-white/" class="product-thumb">
+      <img src="../assets/images/thumbnails/gold-white-1.webp" alt="Gold White Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Gold White Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/citlali/" class="product-thumb">
+      <img src="../assets/images/thumbnails/citlali-1.webp" alt="Citlali Stream Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Citlali Stream Overlay</h3>
+      <p class="product-category">Stream Overlays</p>
+      <div class="product-meta">
+        <span class="product-price">$ 7.93</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/pumpkin-halloween/" class="product-thumb">
+      <img src="../assets/images/thumbnails/pumpkin-halloween-1.webp" alt="Pumpkin Halloween Accessory Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Pumpkin Halloween Accessory Overlay</h3>
+      <p class="product-category">Accessories</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/golden/" class="product-thumb">
+      <img src="../assets/images/thumbnails/golden-1.webp" alt="Golden Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Golden Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-classroom/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-classroom-1.webp" alt="24 Classroom Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Classroom Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/24-nature-room/" class="product-thumb">
+      <img src="../assets/images/thumbnails/24-nature-room-1.webp" alt="24 Nature Room Background Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">24 Nature Room Background Overlay</h3>
+      <p class="product-category">Backgrounds</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/cute-purple/" class="product-thumb">
+      <img src="../assets/images/thumbnails/cute-purple-1.webp" alt="Cute Purple Gaming Desk Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Cute Purple Gaming Desk Overlay</h3>
+      <p class="product-category">Gaming Desk</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/brown-royal/" class="product-thumb">
+      <img src="../assets/images/thumbnails/brown-royal-1.webp" alt="Brown Royal Gaming Chair Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Brown Royal Gaming Chair Overlay</h3>
+      <p class="product-category">Gaming Chair</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/ocean-tall/" class="product-thumb">
+      <img src="../assets/images/thumbnails/ocean-tall-1.webp" alt="Ocean Tall Cake Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Ocean Tall Cake Overlay</h3>
+      <p class="product-category">Cake</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/kawaii-purple/" class="product-thumb">
+      <img src="../assets/images/thumbnails/kawaii-purple-1.webp" alt="Kawaii Purple Gaming Desk Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Kawaii Purple Gaming Desk Overlay</h3>
+      <p class="product-category">Gaming Desk</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.36</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/ocean-beach/" class="product-thumb">
+      <img src="../assets/images/thumbnails/ocean-beach-1.webp" alt="Ocean Beach Cake Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Ocean Beach Cake Overlay</h3>
+      <p class="product-category">Cake</p>
+      <div class="product-meta">
+        <span class="product-price">$ 2.44</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <a href="../product/halloween/" class="product-thumb">
+      <img src="../assets/images/thumbnails/halloween-1.webp" alt="Halloween Desk Gaming Desk Overlay" loading="lazy" />
+    </a>
+    <div class="product-info">
+      <h3 class="product-name">Halloween Desk Gaming Desk Overlay</h3>
+      <p class="product-category">Gaming Desk</p>
+      <div class="product-meta">
+        <span class="product-price">$ 3.66</span>
+        <span class="product-rating"></span>
+      </div>
+    </div>
+  </div>
+
+</div>
+            </div>
+          </div>
+          <div class="loading-spinner"></div>
+        </div>
+
+        <div class="pagination" id="pagination-container"></div>
+
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- Footer content -->
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>YumeLabs</h3>
+          <p>
+            Premium VTuber assets and digital products for content creators
+            who want to stand out.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="/shop">All Products</a></li>
+            <li><a href="#featured-products">Featured Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/faq">FAQs</a></li>
+            <li><a href="/download-help">Download Help</a></li>
+            <li><a href="/refund">Refund Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Also On</h3>
+          <div class="social-links">
+            <a href="https://yumelabs.etsy.com" class="etsy-link" title="Etsy">
+              <i class="fa-brands fa-etsy"></i>
+            </a>
+          </div>
+          <p>Find some of our products on Etsy as well!</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="MasterCard"></i>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 YumeLabs. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../assets/js/scripts.js" defer></script>
+</body>
+
+</html>
